@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #4a00e0, #8e2de2);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Welcome Typing Effect */
+.welcome-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 10vh;
+}
+
+.typewriter {
+  font-size: 2.5rem;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white;
+  width: 0;
+  animation: typing 3s steps(20, end) forwards, blink 0.7s steps(1) 4; /* blink 4 times */
+}
+
+/* Hide cursor after typing & blinking */
+.typewriter.finished {
+  border-right: none;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 18ch }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Waving Hand */
+.wave {
+  display: inline-block;
+  animation: waveHand 2s infinite;
+  transform-origin: 70% 70%;
+  margin-right: 0.3rem;
+}
+
+@keyframes waveHand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.tagline i {
+  margin: 0 8px;
+  color: #ffd700;
+}
+
+.hero-visuals {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  animation: popIn 1s ease-in-out;
+}
+
+.avatar, .code-snippet, .app-mockup {
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover, .code-snippet:hover, .app-mockup:hover {
+  transform: scale(1.05);
+}
+
+.avatar {
+  width: 180px;
+  border-radius: 20px;
+}
+
+.code-snippet {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.app-mockup {
+  width: 140px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.about {
+  background: #1a1a2e;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: 3rem;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.about h2 i {
+  margin-right: 10px;
+  color: #facc15;
+}
+
+.about p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #dcdcdc;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #111;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00d1ff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
